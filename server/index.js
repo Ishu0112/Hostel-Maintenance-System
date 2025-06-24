@@ -7,7 +7,8 @@ const pool = require('./db/connection'); // your mysql2 pool
 const timezoneMiddleware = require('./middlewares/timezoneMiddleware');
 // CORS configuration (must come before routes)
 const corsOptions = {
-  origin: "http://localhost:5173", // your frontend origin
+  // origin: "http://localhost:5173", // your frontend origin
+  origin:"https://hostel-maintenance-system-frontend3.onrender.com",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS","PATCH"],
   allowedHeaders: ["Content-Type","Authorization"],
   credentials: true,
