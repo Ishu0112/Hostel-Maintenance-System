@@ -5,7 +5,7 @@ import Login from './components/Login';
 import StudentDashboard from './components/StudentDashboard';
 import AdminDashboard from './components/AdminDashboard';
 import EngineerDashboard from './components/EngineerDashboard';
-import ProtectedRoute from './components/ProtectedRoute'; 
+import ProtectedRoute from './components/Protectedroute'; 
 
 function App() {
   return (
