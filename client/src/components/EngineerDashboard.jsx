@@ -1,15 +1,15 @@
 // src/Components/EngineerDashboard.jsx
 import { useState, useEffect, useRef } from "react";
-import Header from "../EngineerDashBoardComponents/Header";
-import Sidebar from "../EngineerDashBoardComponents/Sidebar";
-import DashboardOverview from "../EngineerDashBoardComponents/DashboardOverview";
-import NewComplaints from "../EngineerDashBoardComponents/NewComplaints";
-import AssignedComplaints from "../EngineerDashBoardComponents/AssignedComplaints";
-import ComplaintHistory from "../EngineerDashBoardComponents/ComplaintHistory";
-import Schedule from "../EngineerDashBoardComponents/Schedule";
-import UpdateModal from "../EngineerDashBoardComponents/UpdateModal";
-import DetailsModal from "../EngineerDashBoardComponents/DetailsModal";
-import NotificationPanel from "../EngineerDashBoardComponents/NotificationPanel";
+import Header from "../EngineerDashboardComponents/Header";
+import Sidebar from "../EngineerDashboardComponents/Sidebar";
+import DashboardOverview from "../EngineerDashboardComponents/DashboardOverview";
+import NewComplaints from "../EngineerDashboardComponents/NewComplaints";
+import AssignedComplaints from "../EngineerDashboardComponents/AssignedComplaints";
+import ComplaintHistory from "../EngineerDashboardComponents/ComplaintHistory";
+import Schedule from "../EngineerDashboardComponents/Schedule";
+import UpdateModal from "../EngineerDashboardComponents/UpdateModal";
+import DetailsModal from "../EngineerDashboardComponents/DetailsModal";
+import NotificationPanel from "../EngineerDashboardComponents/NotificationPanel";
 import "../styles/EngineerDashboard.css";
 import axios from "axios";
 import {jwtDecode} from "jwt-decode";
