@@ -128,7 +128,7 @@ export default function ComplaintForm({ onSubmitSuccess, onCancel }) {
 
 
     try {
-      const res = await fetch("http://localhost:4000/api/complaints", {
+      const res = await fetch("https://hostel-maintenance-system-backend.onrender.com/api/complaints", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

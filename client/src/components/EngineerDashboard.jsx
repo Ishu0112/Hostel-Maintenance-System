@@ -277,7 +277,7 @@ useEffect(() => {
   }
     try {
       // Send update to server
-      await axios.put(`http://localhost:4000/api/engineer/complaints/update/${engineerId}`, {
+      await axios.put(`https://hostel-maintenance-system-backend.onrender.com/api/engineer/complaints/update/${engineerId}`, {
         complaintId,
         status: updateForm.status,
         work_done: updateForm.work_done,
@@ -443,7 +443,7 @@ useEffect(() => {
   const handleAcceptComplaint = async (complaint) => {
 
     try {
-      await axios.put("http://localhost:4000/api/engineer/complaints/accept", {
+      await axios.put("https://hostel-maintenance-system-backend.onrender.com/api/engineer/complaints/accept", {
         complaintId: complaint.id,
         engineerId,
         adminUserId: complaint.admin_FK,
@@ -494,7 +494,7 @@ useEffect(() => {
   const handleRejectComplaint = async (complaint) => {
 
     try {
-      await axios.put("http://localhost:4000/api/engineer/complaints/reject", {
+      await axios.put("https://hostel-maintenance-system-backend.onrender.com/api/engineer/complaints/reject", {
         complaintId: complaint.id,
         engineerId,
         adminUserId: complaint.admin_FK,

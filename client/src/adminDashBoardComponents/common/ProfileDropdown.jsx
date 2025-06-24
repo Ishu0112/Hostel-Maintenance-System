@@ -36,7 +36,7 @@ const ProfileDropdown = forwardRef(
 
           // If not, fetch from server (your API endpoint might be different)
           const response = await axios.get(
-            `http://localhost:4000/api/admin/profile/${userPk}`
+            `https://hostel-maintenance-system-backend.onrender.com/api/admin/profile/${userPk}`
           );
 
           setAdminData(

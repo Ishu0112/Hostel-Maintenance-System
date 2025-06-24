@@ -16,7 +16,7 @@ import "../styles/AdminDashboardComplaints.css";
 import "../styles/SuccessToast.css";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
-const API_BASE = "http://localhost:4000/api";
+const API_BASE = "https://hostel-maintenance-system-backend.onrender.com/api";
 
 const AdminDashboard = () => {
   const [adminProfile] = useState({
@@ -75,7 +75,7 @@ const AdminDashboard = () => {
 
   const fetchEngineers = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/admin/engineers", {
+      const res = await axios.get("https://hostel-maintenance-system-backend.onrender.com/api/admin/engineers", {
         withCredentials: true,
       });
       setEngineers(res.data);
@@ -199,7 +199,7 @@ const AdminDashboard = () => {
 
     try {
       await axios.patch(
-        `http://localhost:4000/api/admin/engineers/${user_FK}/deactivate`
+        `https://hostel-maintenance-system-backend.onrender.com/api/admin/engineers/${user_FK}/deactivate`
       );
 
       // Immediately fetch the updated list
@@ -258,7 +258,7 @@ const AdminDashboard = () => {
       const user_PK = decodedToken.user_PK;
 
       const res = await fetch(
-        `http://localhost:4000/api/notifications/${user_PK}`
+        `https://hostel-maintenance-system-backend.onrender.com/api/notifications/${user_PK}`
       );
 
       if (!res.ok) throw new Error("Failed to fetch notifications");
@@ -275,7 +275,7 @@ const AdminDashboard = () => {
       const user_PK = decodedToken.user_PK;
 
       const res = await fetch(
-        `http://localhost:4000/api/notifications/markAllAsRead/${user_PK}`,
+        `https://hostel-maintenance-system-backend.onrender.com/api/notifications/markAllAsRead/${user_PK}`,
         {
           method: "PUT",
         }
@@ -292,7 +292,7 @@ const AdminDashboard = () => {
   const markNotificationAsRead = async (notification_PK) => {
     try {
       const res = await fetch(
-        `http://localhost:4000/api/notifications/markAsRead/${notification_PK}`,
+        `https://hostel-maintenance-system-backend.onrender.com/api/notifications/markAsRead/${notification_PK}`,
         { method: "PUT" }
       );
       if (!res.ok) throw new Error("Failed to mark as read");

@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:4000',
+        target: 'https://hostel-maintenance-system-backend.onrender.com',
         changeOrigin: true,
         secure: false,
       },

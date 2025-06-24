@@ -13,7 +13,7 @@ const Complaints = ({ complaints, handleAssignEngineer }) => {
 // /complaints/with-assignees/:id
   const handleViewComplaintDetails = async (complaintId) => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/admin/complaints/with-assignees/${complaintId}`);
+      const response = await axios.get(`https://hostel-maintenance-system-backend.onrender.com/api/admin/complaints/with-assignees/${complaintId}`);
       setComplaintDetailsModal({
         visible: true,
         complaint: response.data,

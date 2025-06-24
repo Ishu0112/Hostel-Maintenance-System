@@ -53,7 +53,7 @@ const Header = () => {
       const user_PK = decodedToken.user_PK;
 
       const res = await fetch(
-        `http://localhost:4000/api/notifications/${user_PK}`
+        `https://hostel-maintenance-system-backend.onrender.com/api/notifications/${user_PK}`
       );
       if (!res.ok) throw new Error("Failed to fetch notifications");
       const data = await res.json();
@@ -70,7 +70,7 @@ const Header = () => {
       const user_PK = decodedToken.user_PK;
 
       const res = await fetch(
-        `http://localhost:4000/api/notifications/markAllAsRead/${user_PK}`,
+        `https://hostel-maintenance-system-backend.onrender.com/api/notifications/markAllAsRead/${user_PK}`,
         {
           method: "PUT",
         }
@@ -88,7 +88,7 @@ const Header = () => {
   const markNotificationAsRead = async (notification_PK) => {
     try {
       const res = await fetch(
-        `http://localhost:4000/api/notifications/markAsRead/${notification_PK}`,
+        `https://hostel-maintenance-system-backend.onrender.com/api/notifications/markAsRead/${notification_PK}`,
         { method: "PUT" }
       );
       if (!res.ok) throw new Error("Failed to mark as read");
