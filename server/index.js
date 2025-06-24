@@ -86,7 +86,7 @@ app.use('/api/admin', adminEngineerRoute);
 app.use('/api/admin', adminComplaintRoute);
 app.use('/api/admin', adminAssignmentRoute); // Uncomment if you have assignment routes
 app.use("/api/admin", adminProfileRoute);
-app.use("/api/admin", adminProfileRoute);
+// app.use("/api/admin", adminProfileRoute);
 
 
 
