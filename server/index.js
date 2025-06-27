@@ -7,13 +7,37 @@ const pool = require('./db/connection'); // your mysql2 pool
 const timezoneMiddleware = require('./middlewares/timezoneMiddleware');
 // CORS configuration (must come before routes)
 const corsOptions = {
-  origin: "http://localhost:5173", // your frontend origin
+  // origin: "http://localhost:5173", // your frontend origin
+  origin:"https://hostel-maintenance-system-frontend3.onrender.com",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS","PATCH"],
   allowedHeaders: ["Content-Type","Authorization"],
   credentials: true,
 };
 
 app.use(cors(corsOptions));
+// CORS configuration (must come before routes)
+// const allowedOrigins = [
+//   'http://localhost:5173',
+//   'https://hostel-maintenance-system-frontend3.onrender.com'
+// ];
+
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     // Allow requests with no origin (like mobile apps, curl, postman) or if in allowed list
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('CORS policy: This origin is not allowed'));
+//     }
+//   },
+//   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+//   allowedHeaders: ["Content-Type", "Authorization"],
+//   credentials: true
+// };
+
+// app.use(cors(corsOptions));
+// app.options('*', cors(corsOptions));  // Handle preflight requests globally
+
 
 app.use(express.json()); // Parse incoming JSON data
 app.locals.pool = pool;
@@ -63,7 +87,7 @@ app.use('/api/admin', adminEngineerRoute);
 app.use('/api/admin', adminComplaintRoute);
 app.use('/api/admin', adminAssignmentRoute); // Uncomment if you have assignment routes
 app.use("/api/admin", adminProfileRoute);
-app.use("/api/admin", adminProfileRoute);
+// app.use("/api/admin", adminProfileRoute);
 
 
 
