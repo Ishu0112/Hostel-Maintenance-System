@@ -186,7 +186,7 @@ useEffect(() => {
         complaint.description.toLowerCase().includes(query) ||
         complaint.location.toLowerCase().includes(query) ||
         complaint.category.toLowerCase().includes(query) ||
-        complaint.studentName?.toLowerCase().includes(query)
+        complaint.submitted_by?.toLowerCase().includes(query)
     );
   }
   setFilteredAssignedComplaints(result);
@@ -204,7 +204,7 @@ useEffect(() => {
       (complaint.description || "").toLowerCase().includes(query) ||
       (complaint.location || "").toLowerCase().includes(query) ||
       (complaint.category || "").toLowerCase().includes(query) ||
-      (complaint.studentName || "").toLowerCase().includes(query)
+      (complaint.submitted_by || "").toLowerCase().includes(query)
     );
   }
 
@@ -230,7 +230,7 @@ useEffect(() => {
         complaint.description.toLowerCase().includes(query) ||
         complaint.location.toLowerCase().includes(query) ||
         complaint.category.toLowerCase().includes(query) ||
-        complaint.studentName?.toLowerCase().includes(query)
+        complaint.submitted_by?.toLowerCase().includes(query)
     );
   }
   setFilteredCompletedComplaints(result);

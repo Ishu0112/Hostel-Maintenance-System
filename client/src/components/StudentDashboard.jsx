@@ -41,37 +41,6 @@ const StudentDashboard = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  
-
-  
-
-
-  
-  //   try {
-  //     await axios.post('/api/feedback', {
-  //       complaint_FK: complaintId,
-  //       rating,
-  //       text: feedback,
-  //     });
-  
-  //     const updatedComplaints = complaints.map((c) =>
-  //       c.id === complaintId ? { ...c, feedback, rating } : c
-  //     );
-  //     setComplaints(updatedComplaints);
-  //     setShowFeedbackModal(false);
-  //     showToast("Feedback Submitted", "Thank you for your feedback!");
-  //   } catch (err) {
-  //     console.error("Failed to submit feedback:", err);
-  //     if (err.response) {
-  //       console.error("Server responded with:", err.response.data);
-  //     } else if (err.request) {
-  //       console.error("No response received:", err.request);
-  //     } else {
-  //       console.error("Error setting up request:", err.message);
-  //     }
-  //     showToast("Error", "Unable to submit feedback. Please try again.");
-  //   }
-  // };
   const handleFeedbackSubmit = async ({ complaintId, rating, feedback }) => {
   try {
     await axios.post('/api/feedback', {
@@ -99,33 +68,23 @@ const StudentDashboard = () => {
 
 
 
-  //   const updatedComplaints = complaints.filter(
-  //     (complaint) => complaint.id !== complaintId
-  //   );
-  //   setComplaints(updatedComplaints);
-  //   updateStats(updatedComplaints);
-  //   setShowDeleteModal(false);
-  //   showToast(
-  //     "Complaint Cancelled",
-  //     "Your complaint has been cancelled successfully."
-  //   );
+ 
+
+  // const updateStats = (updatedComplaints) => {
+  //   setStats({
+  //     total: updatedComplaints.length,
+  //     pending: updatedComplaints.filter((c) => c.status === "pending").length,
+  //     inProgress: updatedComplaints.filter((c) => c.status === "in-progress")
+  //       .length,
+  //     resolved: updatedComplaints.filter((c) => c.status === "completed")
+  //       .length,
+  //   });
   // };
 
-  const updateStats = (updatedComplaints) => {
-    setStats({
-      total: updatedComplaints.length,
-      pending: updatedComplaints.filter((c) => c.status === "pending").length,
-      inProgress: updatedComplaints.filter((c) => c.status === "in-progress")
-        .length,
-      resolved: updatedComplaints.filter((c) => c.status === "completed")
-        .length,
-    });
-  };
-
-  const showToast = (title, message) => {
-    setSuccessMessage({ title, message });
-    setTimeout(() => setSuccessMessage(null), 3000);
-  };
+  // const showToast = (title, message) => {
+  //   setSuccessMessage({ title, message });
+  //   setTimeout(() => setSuccessMessage(null), 3000);
+  // };
 
   const renderContent = () => {
     if (isLoading) {
