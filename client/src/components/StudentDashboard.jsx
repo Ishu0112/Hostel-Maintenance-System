@@ -70,16 +70,16 @@ const StudentDashboard = () => {
 
  
 
-  // const updateStats = (updatedComplaints) => {
-  //   setStats({
-  //     total: updatedComplaints.length,
-  //     pending: updatedComplaints.filter((c) => c.status === "pending").length,
-  //     inProgress: updatedComplaints.filter((c) => c.status === "in-progress")
-  //       .length,
-  //     resolved: updatedComplaints.filter((c) => c.status === "completed")
-  //       .length,
-  //   });
-  // };
+  const updateStats = (updatedComplaints) => {
+    setStats({
+      total: updatedComplaints.length,
+      pending: updatedComplaints.filter((c) => c.status === "pending").length,
+      inProgress: updatedComplaints.filter((c) => c.status === "in-progress")
+        .length,
+      resolved: updatedComplaints.filter((c) => c.status === "completed")
+        .length,
+    });
+  };
 
   // const showToast = (title, message) => {
   //   setSuccessMessage({ title, message });

@@ -63,8 +63,8 @@ const StatsCards = () => {
         }));
 
         const total = normalized.length;
-        const pending = normalized.filter((c) => c.status === "pending").length;
-        const resolved = normalized.filter((c) => c.status === "completed").length;
+        const pending = normalized.filter((c) => c.status === "Pending").length;
+        const resolved = normalized.filter((c) => c.status === "Completed").length;
         const inProgress = total - pending - resolved;
 
         setStats({ total, pending, inProgress, resolved });
